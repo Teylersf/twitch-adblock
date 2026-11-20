@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Twitch Ad Shield</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="../icons/icon32.png" alt="" width="20" height="20">
+    <h1>Twitch Ad Shield</h1>
+  </header>
+
+  <label class="switch-row">
+    <span id="state-label">Blocking on</span>
+    <input type="checkbox" id="enabled" role="switch">
+  </label>
+
+  <label class="switch-row sub">
+    <span>H.264 only<br><small>Prevents Error #4000 during ads; skips HEVC/AV1 versions of 2K/4K streams</small></span>
+    <input type="checkbox" id="h264only" role="switch">
+  </label>
+
+  <p id="hint" class="hint" hidden>Reload Twitch tabs to apply.</p>
+  <button id="reload" type="button" hidden>Reload Twitch tabs</button>
+
+  <dl class="meta">
+    <dt>Engine</dt>
+    <dd id="engine">…</dd>
+  </dl>
+
+  <p class="foot">Live streams only. Turn off any other Twitch ad blocker so they don't fight over the player.</p>
+
+  <script src="popup.js"></script>
+</body>
+</html>

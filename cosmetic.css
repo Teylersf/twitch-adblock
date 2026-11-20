@@ -1,0 +1,14 @@
+/*
+ * Hides leftover ad UI on twitch.tv. Selectors adapted from uBlock Origin's
+ * uAssets filters (filters/quick-fixes.txt and filters/experimental.txt).
+ * Purely cosmetic: the stream itself is handled by engine/vaft.js.
+ */
+[data-a-target="video-ad-label"],
+[data-a-target="video-ad-countdown"],
+button[aria-label="Leave feedback for this Ad"],
+button[aria-label="Learn more about this ad"],
+.stream-display-ad__wrapper,
+.stream-display-ad__wrapper + div > div[style^="position:"] > div[class^="Layout-sc-"]:has(video[src^="https://m.media-amazon.com"]),
+.chat-shell > div[class^="Layout-sc-"] > div[style^="transition:"]:has(video[src^="https://m.media-amazon.com"]) {
+  display: none !important;
+}
